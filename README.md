@@ -1,4 +1,4 @@
-# SinglyLinkedList-Implementation-in-Java-2
+# SinglyLinkedList-Implementation-in-Java
 # This repository explains how to implement SinglyLinkedList and its various operations in Java
 ## You will learn the following
 ### 1.How to print the Elements of a SinglyLinkedList
