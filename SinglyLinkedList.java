@@ -233,6 +233,117 @@ public class SinglyLinkedList {
 
           SinglyLinkedList sll = new SinglyLinkedList();
 
+        int ch , op;
+        Scanner s = new Scanner(System.in);
+
+        do {
+
+            System.out.println("Enter the operation you wanna perform");
+            System.out.println("\n1.DisplayList\n2.InsertAtFirst\n3.InsertAtEnd\n4.getLength\n5.SearchElement\n6.findMiddleNode\n7.getNthNodeFromEnd\n8.deleteNode\n9.DetectLoop\n10.reverseList\n11.InsertElementInSortedManner");
+            ch = s.nextInt();
+
+            switch (ch) {
+
+                case 1 :
+
+                    sll.display(head);
+                    break;
+
+                case 2 :
+                    System.out.println("Enter the value you wanna insert at Beginning of the list :");
+                    int insertBeginningValue = s.nextInt();
+                    sll.insertFirst(insertBeginningValue);
+
+                    break;
+
+                case 3:
+                    System.out.println("Enter the value you wanna insert at end of the list :");
+                    int insertEndValue = s.nextInt();
+                    sll.insertEnd(insertEndValue);
+                    break;
+                case 4:
+                    sll.length();
+                    break;
+
+                case 5:
+                    System.out.println("Enter the value you wanna Search in the list :");
+                    int searchElement = s.nextInt();
+                    sll.Search(searchElement);
+                    break;
+
+                case  6:
+
+                    sll.findMiddleNode();
+                    break;
+
+                case 7:
+
+                    System.out.println("Enter nth node from end : ");
+                    int n = s.nextInt();
+                    sll.getNthNodeFromEnd(n);
+                    break;
+
+                case 8:
+                    System.out.println("Enter the value you wanna delete from the list :");
+                    int DeleteValue = s.nextInt();
+                    sll.deleteNode(DeleteValue);
+                    break;
+
+                case 9 :
+
+                    sll.detectLoop();
+                    break;
+
+                case 10:
+
+                    ListNode reversedHead = sll.reverseList();
+                    sll.display(reversedHead);
+                    break;
+
+                case 11:
+                    System.out.println("Enter the element you wanna insert(sorted) : ");
+                    int InsertAsSorted = s.nextInt();
+                    ListNode sortedHead = sll.insertInSortedList(InsertAsSorted);
+                    sll.display(sortedHead);
+
+                    break;
+
+                default :
+
+                    System.out.println("Invalid");
+
+            }
+
+            System.out.println("Do you want to continue(0/1)?\n");
+            op = s.nextInt();
+
+        }while (op == 1);
+
+         /* head = new ListNode(10);
+          ListNode second = new ListNode(1);
+          ListNode third = new ListNode(8);
+          ListNode fourth = new ListNode(11);
+          head.next = second ;
+          second.next = third ;
+          third.next = fourth ;
+          sll.display(head);
+          sll.length();
+          sll.insertFirst(9);
+          sll.insertFirst(3);
+          sll.display(head);
+          sll.length();
+          sll.insertEnd(99);
+          sll.insertFirst(45);
+          sll.display(head);
+          sll.length();
+          sll.Search(22);
+          //ListNode reversedHead = sll.reverseList();
+          //sll.display(reversedHead);
+          sll.findMiddleNode();
+          sll.getNthNodeFromEnd(8);
+          sll.deleteNode(11);
+          sll.display(head);
+          System.out.println(sll.detectLoop()); */
 
     }
 
